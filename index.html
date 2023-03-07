@@ -8,18 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Formulario de registro</title>
 </head>
+
 <body>
     <section class="form-register">
-    <h4>Formulario de registro</h4>
-        <input class="controls" type="text" name="Nombres" id="nombres" placeholder="Ingrese su nombre">
-        <input class="controls" type="text" name="Nombre de cuenta" id="cuenta" placeholder="Ingrese el nombre de su cuenta">
-        <input class="controls" type="text" name="Cedula" id="cedula" placeholder="Ingrese su cedula porfavor">
-        <input class="controls" type="text" name="Correo" id="correo" placeholder="Ingrese su correo electronico">
-        <input class="controls" type="text" name="Contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-        <p>Ver los <a href="#"> Terminos y condiciones</a></p>
-        <input class="buttons" type="submit" value="Registrar">
-        <p><a href="acceder.html">¿Ya posee cuenta?</a></p>
+        <form action=""id="Formulario">
+            <h4>Formulario de registro </h4>
+            <input class="controls" type="text" name="Nombres" id="nombres" required minlength="3" maxlength="20"
+                placeholder="Ingrese su nombre">
+            <input class="controls" type="text" name="Nombre de cuenta" id="cuenta"
+                placeholder="Ingrese el nombre de su cuenta">
+            <input class="controls" type="text" name="Cedula" id="cedula" placeholder="Ingrese su cedula porfavor">
+            <input class="controls" type="text" name="Correo" id="correo" placeholder="Ingrese su correo electronico">
+            <input class="controls" type="password" name="Contraseña" 
+            pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+                title="Una contraseña válida es un conjuto de caracteres, donde cada uno consiste de una letra mayúscula 
+        o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menor un dígito" required
+                id="contraseña" placeholder="Ingrese su contraseña">
+            <p>Ver los <a href="#"> Terminos y condiciones</a></p>
+            <input class="buttons" type="submit" value="Registrar">
+            <p><a href="acceder.html">¿Ya tengo cuenta?</a></p>
+        </form>
     </section>
 </body>
+<script>
+   let leerformulario = document.getElementById("Formulario") 
+   leerformulario.addEventListener("submit", () => {
+   let leercontraseña =document.getElementById("Contraseña")
+   console.log(leercontraseña);
+   })
+
+</script>
 
 </html>
