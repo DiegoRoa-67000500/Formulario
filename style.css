@@ -60,3 +60,14 @@ body{
     margin: 16px 0;
     font-size: 16px;
 }
+
+.icon{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    border: 5px solid black;
+    font-size: 20px;
+    background-color: #24303c;
+    color: black;
+}
